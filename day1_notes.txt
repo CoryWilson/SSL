@@ -1,0 +1,17 @@
+webkeepers hosting
+
+POST works mostly with forms
+GET works mostly with URLs
+
+? is the separator between domain name and parameters
+
+enctype
+ - encode type
+ - one of the form attributes
+
+attribute values
+- text/html
+- application
+- mutlipart data
+
+hex editor raw format of the file
