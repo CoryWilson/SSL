@@ -17,6 +17,21 @@
   //var_dump($myarr);
   //var_dump(get());
 
-  var_dump($_POST);
+  // var_dump($_POST);
+  // var_dump($_GET);
+
+  //if you use GET in the form you lose the url information
+
+  //echo $_POST["firstname"].' '.$_GET["lastname"];
+
+  //echo $_POST;
+
+  foreach($_POST as $x){
+    echo $x;
+  }
+
+  //if($name == "Joe"){
+  //
+  //}
 
 ?>
