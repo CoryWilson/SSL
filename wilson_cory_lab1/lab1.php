@@ -11,7 +11,8 @@
 	$array = store_assoc_array();
 
 	foreach($array as $key => $value){
-		echo "The Key is: $key & The Value is: $value<br/>";
+		echo "The Key is: $key & The Value is: $value";
+		echo "<br/>";
 	}
 	if($array["state"] == "FL"){
 		echo "Sunshine State";

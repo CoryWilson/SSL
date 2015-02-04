@@ -5,81 +5,57 @@
 	<title>Cory Wilson | Lab 1</title>
 	<link rel="stylesheet" href="css/foundation.min.css" type="text/css" />
 	<link rel="stylesheet" href="css/main.css" type="text/css" />
+	<script src="//use.typekit.net/jpd4eaw.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
 </head>
 <body>
-	<header>
-		<h1>Cory Wilson Lab 1</h1>
-	</header>
-	<div class="small-12 small-centered columns">
+	<div class="small-12 small-centered medium-10 medium-centered large-8 large-centered columns">
 		<form enctype="" action="/SSL/wilson_cory_lab1/lab1.php" method="POST">
+			<h1>Input Your Information</h1>
 			<div class="row">
-				<div class="small-5 columns">
-					<label for="fname" class="right">First Name: </label>
-				</div>
-				<div class="small-7 columns">
-					<input type="text" name="fname" value="" id="fname"/>
+				<div class="small-12 columns">
+					<input type="text" name="fname" placeholder="First Name" value="" id="fname"/>
 				</div>
 			</div>
 			<div class="row">
-				<div class="small-5 columns">
-					<label for="lname" class="right">Last Name: </label>
-				</div>
-				<div class="small-7 columns">
-					<input type="text" name="lname" value="" id="lname"/>
+				<div class="small-12 columns">
+					<input type="text" name="lname" placeholder="Last Name" value="" id="lname"/>
 				</div>
 			</div>
 			<div class="row">
-				<div class="small-5 columns">
-					<label for="address" class="right">Address: </label>
-				</div>
-				<div class="small-7 columns">
-					<input type="text" name="address" value="" id="address"/>
+				<div class="small-12 columns">
+					<input type="text" name="address" placeholder="Address" value="" id="address"/>
 				</div>
 			</div>
 			<div class="row">
-				<div class="small-5 columns">
-					<label for="state" class="right">State: </label>
-				</div>
-				<div class="small-7 columns">
-					<input type="text" name="state" value="" maxlength="2" id="state"/>
+				<div class="small-12 columns">
+					<input type="text" name="state" placeholder="State" value="" maxlength="2" id="state"/>
 				</div>
 			</div>
 			<div class="row">
-				<div class="small-5 columns">
-					<label for="zipcode" class="right">Zipcode: </label>
-				</div>
-				<div class="small-7 columns">
-					<input type="text" name="zipcode" value="" maxlength="5" id="zipcode" />
+				<div class="small-12 columns">
+					<input type="text" name="zipcode" placeholder="Zipcode" value="" maxlength="5" id="zipcode" />
 				</div>
 			</div>
 			<div class="row">
-				<div class="small-5 columns">
-					<label for="email" class="right">Email: </label>
-				</div>
-				<div class="small-7 columns">
-					<input type="email" name="email" value="" id="email" />
+				<div class="small-12 columns">
+					<input type="email" name="email" placeholder="Email" value="" id="email" />
 				</div>
 			</div>
 			<div class="row">
-				<div class="small-5 columns">
-					<label for="phone" class="right">Phone Number: </label>
-				</div>
-				<div class="small-7 columns">
-					<input type="text" name="phone" value="" maxlength="10" id="phone" />
+				<div class="small-12 columns">
+					<input type="text" name="phone" placeholder="Phone Number" value="" maxlength="10" id="phone" />
 				</div>
 			</div>
 			<div class="row">
-				<div class="small-5 columns">
-					<label for="url" class="right">Web URL: </label>
-				</div>
-				<div class="small-7 columns">
-					<input type="text" name="url" value="" id="url" />
+				<div class="small-12 columns">
+					<input type="text" name="url" placeholder="Web URL" value="" id="url" />
 				</div>
 			</div>
 			<div class="row">
-				<div class="small-3 columns">
-					<input type="submit" class="button"/>
-				</div>
+				<button type="submit" class="small-10 small-offset-1 columns" id="submit">
+					Submit
+				</button>
 			</div>
 		</form>
 	</div>
