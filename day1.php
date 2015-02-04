@@ -6,7 +6,9 @@
 
   //echo 'My name is '.$name.' , hi';
 
-  //$myarr = array("name"=>"mike");
+  $myarr = array("name"=>"mike");
+
+  echo $myarr
 
   // function get(){
   //   echo "inside get";
@@ -26,9 +28,9 @@
 
   //echo $_POST;
 
-  foreach($_POST as $x){
-    echo $x;
-  }
+  // foreach($_POST as $x){
+  //   echo $x;
+  // }
 
   //if($name == "Joe"){
   //
