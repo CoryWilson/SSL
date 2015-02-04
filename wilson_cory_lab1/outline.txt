@@ -1,0 +1,9 @@
+Cory Wilson
+02/04/2015
+SSL
+Outline for Lab 1
+
+Link to Screencast: http://youtu.be/RuopCl1jX0k
+
+1. Show my html, css, and php code.
+2. Run through a walkthrough of lab on screencast to show how it functions.

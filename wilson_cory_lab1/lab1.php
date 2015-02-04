@@ -15,10 +15,10 @@
 		echo "<br/>";
 	}
 	if($array["state"] == "FL"){
-		echo "Sunshine State";
+		echo "Florida is the Sunshine State";
 	}
 	if($array["state"] == "NY"){
-		echo "Empire State";
+		echo "New York is the Empire State";
 	}
 
 ?>
