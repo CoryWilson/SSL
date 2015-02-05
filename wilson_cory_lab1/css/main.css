@@ -19,3 +19,9 @@ form button {
 	font-family: "museo-slab",georgia,serif;
 	font-weight: "700";
 }
+
+.output {
+	background: rgba(255, 255, 255, 0.9);
+	margin-top: 50px;
+	padding: 15px;
+}
