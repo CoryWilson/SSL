@@ -28,6 +28,7 @@
       if($_POST["username"]=="cory" && $_POST["password"]=="pass"){
         $_SESSION["username"] = $_POST["username"];
         $_SESSION["password"] = $_POST["password"];
+        //$_SESSION["avatarUpload"] = $_POST["avatarUpload"];
         $_SESSION["loggedin"] = true;
       } else{
         $_SESSION["username"] = "";

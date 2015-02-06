@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Cory Wilson | Lab 2</title>
@@ -9,18 +7,18 @@
   <script>try{Typekit.load();}catch(e){}</script>
 </head>
 <header>
-  <nav class="icon-bar four-up">
+  <div class="icon-bar four-up">
     <a href="index.php?controller=home" class="item">
       <label>Home</label>
     </a>
     <a href="index.php?controller=home&action=loginForm" class="item">
-      <label>Login</label>
+      <label>Log In</label>
     </a>
     <a href="index.php?controller=home&action=checkProfile" class="item">
       <label>Profile</label>
     </a>
     <a href="index.php?controller=home&action=logOut" class="item">
-      <label>Logout</label>
+      <label>Log Out</label>
     </a>
-  </nav>
+  </div>
 </header>

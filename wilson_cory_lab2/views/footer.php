@@ -1,4 +1,1 @@
-<footer>
-  Footer
-</footer>
-</html>
+
