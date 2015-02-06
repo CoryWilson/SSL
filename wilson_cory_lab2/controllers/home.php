@@ -27,6 +27,7 @@
       //var_dump($_POST);
       if($_POST["username"]=="cory" && $_POST["password"]=="pass"){
         $_SESSION["username"] = $_POST["username"];
+        $_SESSION["password"] = $_POST["password"];
         $_SESSION["loggedin"] = true;
       } else{
         $_SESSION["username"] = "";
@@ -48,11 +49,12 @@
     } else if($_GET["action"]=="logOut"){
 
       session_destroy();
+      header('Location: index.php');
       $viewmodel->getView("views/header.php");
       $viewmodel->getView("views/body.php");
       $viewmodel->getView("views/footer.php");
 
-    } 
+    }
 
   }
 

@@ -10,7 +10,7 @@
         <input type="password" name="password" placeholder="Password" value="" id="password"/>
       </div>
     </div>
-    <button type="submit">
+    <button type="submit" class="small-10 small-offset-1 columns">
       Submit
     </button>
   </form>
