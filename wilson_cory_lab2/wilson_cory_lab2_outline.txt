@@ -1,0 +1,12 @@
+Cory Wilson
+SSL 1502
+Lab 2 Outline
+
+MVC User Login Program
+
+Screencast Link: http://youtu.be/JsOamgJTrwA
+
+- HTML form that when submitted will bring the user to a user profile page.
+- The profile page displays the username and hashed password the user put into the form.
+- Clicking on the Log Out button in the top right will terminate the user's session.
+

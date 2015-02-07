@@ -1,0 +1,19 @@
+action for file upload
+upload form upload action in controller
+
+view based authentication
+
+if($_SESSION['loggedin'] == true){
+	if($_SESSION['loggedin'] == false){
+		header("location: ?controller=home&action=login");
+	}
+} else{
+	header("location: ?controller=home&action=login");
+}
+
+pdo is the middleman that communicates between server side and database
+
+server-side -> pdo -> database
+database -> pdo -> server-side
+
+create a protected page
