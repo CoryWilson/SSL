@@ -1,7 +1,7 @@
 Cory Wilson
 SSL Lab 3 Outline
 
-Video Link: http://youtu.be/0NywqcOMVwM
+Video Link: http://youtu.be/5v3mqMTKUgM
 
 - Create a login form that interacts with the a database.
 - Login Protect One Page

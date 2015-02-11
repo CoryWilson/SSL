@@ -18,6 +18,9 @@
 
     if($_GET["action"]=="home"){
 
+      $viewmodel->getView("views/header.php");
+      $viewmodel->getView("views/body.php");
+
     } else if($_GET["action"]=="loginForm"){
 
       $viewmodel->getView("views/header.php");
@@ -36,16 +39,15 @@
       }
 
       $data = $returnedLogin;
-      $viewmodel->getView("views/loginCheck.php",$data);
       $viewmodel->getView("views/header.php");
       $data = $_SESSION;
       $viewmodel->getView("views/profile.php",$data);
 
 
     } else if($_GET["action"]=="checkProfile"){
-
       $data = $_SESSION;
       $viewmodel->getView("views/loginCheck.php",$data);
+      
       $viewmodel->getView("views/header.php");
       $viewmodel->getView("views/profile.php",$data);
 
