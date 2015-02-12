@@ -1,0 +1,4 @@
+come up with something for student presentation
+
+api call is making a request to a server that you have no control over.
+
