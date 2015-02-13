@@ -1,0 +1,11 @@
+wilson_cory_lab4_outline.txt
+Cory Wilson
+SSL Lab 3
+MVC CRUD Application
+
+Video Link: http://youtu.be/ekXIs-oGpnE
+
+Create
+Read
+Update
+Delete
