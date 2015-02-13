@@ -23,8 +23,8 @@
     <a href="index.php?controller=home&action=checkProfile" class="item">
       <label>Profile</label>
     </a>
-    <a href="index.php?controller=home&action=inJSON" class="item">
-      <label>Check API</label>
+    <a href="index.php?controller=home&action=weatherForm" class="item">
+      <label>Check Weather</label>
     </a>
 
   </div>

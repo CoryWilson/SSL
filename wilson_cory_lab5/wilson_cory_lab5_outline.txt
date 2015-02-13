@@ -1,11 +1,14 @@
-wilson_cory_lab4_outline.txt
 Cory Wilson
-SSL Lab 3
-MVC CRUD Application
+SSL Lab 5
+MVC CRUD Application w/ API 
 
-Video Link: http://youtu.be/ekXIs-oGpnE
+Video Link: http://youtu.be/0WCZn1YSB4c
 
 Create
 Read
 Update
 Delete
+
+Log In and Log Out
+
+Utilize Weather Underground API to pull in current conditions for any city you search for in the United States.

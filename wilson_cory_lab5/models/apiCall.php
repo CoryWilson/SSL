@@ -4,9 +4,9 @@
 
   class apiCall{
 
-    public function getAPI($par=''){
+    public function getAPI($location){
 
-      include $par;
+      include $location;
 
     }
 

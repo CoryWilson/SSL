@@ -104,29 +104,23 @@
       $data = $usersmodel->getUsers();
       echo json_encode($data);
 
-    } else if($_GET["action"]=="inJSON"){
+    } else if($_GET["action"]=="weatherForm"){
+
+      $viewmodel->getView("views/header.php");
+      $viewmodel->getView("views/weatherForm.php");
+
+    } else if($_GET["action"]=="weatherProcess"){
 
       $api_key = "9223f36975c7d646";
-      $city = "Orlando"; //put input data in here
-      $state = "FL"; //and here
+      $city = $_POST["city"];
+      $state = $_POST["state"];
       $data = file_get_contents("http://api.wunderground.com/api/".$api_key."/geolookup/conditions/q/".$state."/".$city.".json");
       $JSONarr = json_decode($data);
 
       $viewmodel->getView("views/header.php");
       $viewmodel->getView("views/checkAPI.php",$JSONarr);
 
-    }
-      else if($_GET["action"]="straightJSON"){
-      
-      header("Content-Type: application/json");
-      $api_key = "9223f36975c7d646";
-      $city = "Orlando"; //put input data in here
-      $state = "FL"; //and here
-      $data = file_get_contents("http://api.wunderground.com/api/".$api_key."/geolookup/conditions/q/".$state."/".$city.".json");
-      echo $data;
-
-    }
-
+    } 
   }
 
 ?>

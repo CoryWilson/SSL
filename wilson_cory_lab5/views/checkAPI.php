@@ -15,7 +15,7 @@
 		<ul>
 			<li><? echo "Current Conditions: ".$weather; ?></li>
 			<li><? echo "Temperature: ".$temp_f."&deg; F"; ?></li>
-			<li><? echo "Humidity: ".$humidity."&#37;"; ?></li>
+			<li><? echo "Humidity: ".$humidity; ?></li>
 			<li><? echo "Wind: ".$wind."."; ?></li>
 		</ul>
 	</div>
