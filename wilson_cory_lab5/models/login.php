@@ -16,12 +16,6 @@
 
       return $st->fetchAll();
 
-      // if($st->fetchAll()){
-      //   return 1;
-      // } else {
-      //   return 0;
-      // }
-
     }
 
   }

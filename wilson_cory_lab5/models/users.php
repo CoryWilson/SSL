@@ -27,7 +27,7 @@
 
       $st = $dbh->prepare($sql);
 
-      $st->execute(array(":username"=>$username, ":password"=>$password, ":id"=>$userid));
+      $st->execute(array(":username"=>$username, ":password"=>md5($password), ":id"=>$userid));
 
     }
 
@@ -54,7 +54,7 @@
 
       $st = $dbh->prepare($sql);
 
-      $st->execute(array(":username"=>$username, ":password"=>$password));
+      $st->execute(array(":username"=>$username, ":password"=>md5($password)));
 
     }
 

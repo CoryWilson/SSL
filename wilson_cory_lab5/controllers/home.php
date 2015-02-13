@@ -44,6 +44,7 @@
 
       $data = $returnedLogin;
       $viewmodel->getView("views/header.php");
+      $data = $_SESSION;
       $viewmodel->getView("views/profile.php",$data);
 
 
