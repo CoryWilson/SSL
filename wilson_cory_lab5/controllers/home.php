@@ -112,7 +112,7 @@
     } else if($_GET["action"]=="weatherProcess"){
 
       $api_key = "9223f36975c7d646";
-      $city = $_POST["city"];
+      $city = str_replace(' ', '_', $_POST["city"]);
       $state = $_POST["state"];
       $data = file_get_contents("http://api.wunderground.com/api/".$api_key."/geolookup/conditions/q/".$state."/".$city.".json");
       $JSONarr = json_decode($data);

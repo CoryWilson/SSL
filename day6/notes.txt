@@ -1,0 +1,7 @@
+import and pull method for hashing with python
+
+lab 1 + file upload
+get and post send to process form output hashed information
+pass data into template
+
+pass array into python with foreach thingy

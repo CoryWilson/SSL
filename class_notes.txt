@@ -1,0 +1,5 @@
+one page for admin -> custom control panel
+one page for login with twitter or facebook -> save info into database
+add a new picture -> save to database
+
+dynamic carousel controlled by backend
