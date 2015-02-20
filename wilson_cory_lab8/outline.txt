@@ -1,11 +1,13 @@
 Cory Wilson
-Lab 7
+Lab 8
 
-Python Form w/ Image Upload
+Python Login w/ Database
 
-Screencast Url: http://youtu.be/YYPGm25p_cU
+Screencast Url: http://youtu.be/f5OU7iEfZSw
 
--Used python to create a form
--Form takes in name string, password string, and an image upload
--Hashed the password
--Display the information in the display view
+-Used python & flask to create a login form
+-Form takes in name string, and password string
+-Checks with database to make sure the login information posted through form matches login information from the database
+-If it checks out it creates a session with the information
+-Display the user information if logged in
+-Click button to log out and end session

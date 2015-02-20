@@ -12,38 +12,8 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.debug = True
 sha1 = hashlib.sha1()
 
-
-@app.route('/')
-def index():
-     return render_template('/form.html')
-@app.route('/form')
-def form():
-     return render_template('/form.html')
-
-@app.route('/login', methods=['GET','POST'])
-def login_check():
-     if request.method == 'POST':
-          session['name'] = request.form['name']
-          #return redirect(url_for('index'))
-          return redirect(url_for('display_all'))
-     return render_template('/form.html')
-
-# def login_check():
-#      if returned_login:
-#           session['name'] = request.form['name']
-#      #      session['loggedin'] = True
-#      # else:
-#      #      session['name'] = ""
-#      #      session['loggedin'] = false
-#      print returned_login
-#      return render_template('/display.html',returned_login=returned_login)
-
-@app.route('/logout')
-def logout():
-     session.pop('name', None)
-     return redirect(url_for('index'))
-
-def check_user(user):
+#function that checks user input with users in the database
+def check_user(n,p):
      config = {
                'user':'root',
                'password':'root',
@@ -54,25 +24,71 @@ def check_user(user):
 
      db =  mysql.connector.connect(**config)
      cur = db.cursor()
-     query = ('select id, username, password from users where username = %s and password = %s;')
-     #username = request.form["name"]
-     username = user["name"]
-     #password = sha1.update(request.form["password"])
-     password = sha1.update(user["password"])
+     query = ('select username, password from users where username = %s and password = %s;')
+     username = n
+     password = sha1.update(p)
      pw_digest = sha1.hexdigest()
      cur.execute(query, (username, pw_digest))
      data = cur.fetchall()
 
-     #return render_template('/display.html',data=data)
      return data
 
-# @app.route('/display_user')
-# def display_user():
-#      data = session
-#      return render_template('/display.html',data=data)
+@app.route('/')
+def index():
+     return render_template('/form.html')
 
+@app.route('/form')
+def form():
+     return render_template('/form.html')
+
+@app.route('/login', methods=['GET','POST'])
+#function that logs the user in
+def login_check():
+     if request.method == 'POST':
+          #checks to see if form is empty and redirects home if it is
+          if not request.form['name'] and not request.form['password']:
+               return redirect(url_for('index'))
+          #if everything checks out it processes the form
+          else:
+               input_name = request.form['name']
+               input_password = request.form['password']
+               returned_login = check_user(input_name,input_password)
+
+               #if there is not correct log in info returned
+               #redirect back to index
+               if not returned_login:
+                    return redirect(url_for('index'))
+               else:
+                    session['name'] =  returned_login[0][0]
+                    session['password'] = returned_login[0][1]
+                    name = session['name']
+                    pw = session['password']
+
+                    return render_template('/display.html',name=name,pw=pw)
+               
+     return redirect(url_for('index'))
+
+@app.route('/logout')
+#function that logs the user out
+def logout():
+     session.pop('name', None)
+     session.pop('password', None)
+     return redirect(url_for('index'))
+
+@app.route('/display_user')
+#function that displays the logged in user
+def display_user():
+     #if there is no session it will redirect back to login form
+     if not session:
+          return redirect(url_for('form'))
+     else: 
+          name = session['name']
+          pw = session['password']
+          return render_template('/display.html', name=name, pw=pw)
 
 @app.route('/display_all')
+#function that will pull down all of the users from the database 
+#and display them
 def display_all():
      config = {
                'user':'root',
@@ -84,12 +100,13 @@ def display_all():
 
      db =  mysql.connector.connect(**config)
      cur = db.cursor()
-     query = ('select id, username, password from users;')
+     query = ('select username, password from users;')
      cur.execute(query)
      data = cur.fetchall()
 
-     return render_template('/display.html',data=data)
+     return render_template('/display_all.html',data=data)
 
+#serves up the images from the uploads folder
 @app.route('/uploads/<filename>')
 def uploaded_file(filename):
      return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
