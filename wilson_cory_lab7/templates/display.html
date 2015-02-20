@@ -1,11 +1,8 @@
 {% extends "layout.html" %}
 {% block body %}
 <div class="body small-11 small-centered medium-10 medium-centered large-8 large-centered columns">
-	<div class="row">
-		{% for item in data %}
-			<div>{{item}}</div>
-		{% endfor %}
-		<img src="/uploads/lights.jpg" />
-	</div>
+	<div class="row">Name: {{data[0]}}</div>
+	<div class="row">Password: {{data[1]}}</div>
+	<div class="row"><img src="{{data[2]}}"></div>
 </div>
 {% endblock %}
