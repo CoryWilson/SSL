@@ -1,0 +1,11 @@
+Cory Wilson
+Lab 7
+
+Python Form w/ Image Upload
+
+Screencast Url: http://youtu.be/YYPGm25p_cU
+
+-Used python to create a form
+-Form takes in name string, password string, and an image upload
+-Hashed the password
+-Display the information in the display view
