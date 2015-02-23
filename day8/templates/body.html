@@ -1,0 +1,16 @@
+{% extends layout.html %}
+{% block body %}
+<div class="body small-11 small-centered medium-10 medium-centered large-8 large-centered columns">
+	{% for item in data %}
+		<div class="row">
+			{{item[1]}}
+		</div>
+		<div class="row">
+			<a href="/edit_form/{{item[0]}}">Edit</a>
+		</div>
+		<div class="row">
+			<a href="/delete_user/{{item[0]}}">Delete</a>
+		</div>
+	{% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+<!doctype html>
+<title>Cory Wilson | SSL Lab 9</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='foundation.min.css') }}">
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='main.css') }}">
+<script src="//use.typekit.net/jpd4eaw.js"></script>
+<script>try{Typekit.load();}catch(e){}</script>
+<div class=page>
+  <nav class="icon-bar five-up">
+    <a href="/" class="item">
+      <label>Home</label>
+    </a>
+    <a href="/form" class="item">
+      <label>Log In</label>
+    </a>
+    <a href="/add_form" class="item">
+      <label>Add User</label>
+    </a>
+    <a href="/display_user" class="item">
+      <label>Display User</label>
+    </a>
+    <a href="/logout" class="item">
+      <label>Log Out</label>
+    </a>
+  </nav>
+  {% block body %}
+  {% endblock %}
+</div>

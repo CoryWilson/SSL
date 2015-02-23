@@ -1,0 +1,6 @@
+{% for item in data %}
+	<form action="/update_user/{{item[0]}}" method="POST">
+		<input type="text" name="username" value="{{item[1]}}" />
+		<input type="submit" />
+	</form>
+{% endfor %}
