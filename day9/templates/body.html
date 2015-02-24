@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="body small-11 small-centered medium-10 medium-centered large-8 large-centered columns">
+	<h1>SSL Lab 9 | All Users</h1>
+	{% for item in data %}
+		<div class="row small-7 small-centered columns">
+			<h2 class="left">{{item[1]}}</h2>
+			<div class="right">
+				<a href="/edit_form/{{item[0]}}">
+					<button class="tiny info">Edit</button>
+				</a>
+				<a href="/delete_user/{{item[0]}}">
+					<button class="tiny alert">Delete</button>
+				</a>
+			</div>
+		</div>
+	{% endfor %}
+</div>
+{% endblock %}

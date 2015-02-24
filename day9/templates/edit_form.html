@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block body %}
+{% for item in data %}
+<div class="small-11 small-centered medium-10 medium-centered large-8 large-centered columns">
+	<form action="/update_user/{{item[0]}}" method="POST">
+		<div class="small-11 small-centered columns">
+			<input type="text" name="username" value="{{item[1]}}" />
+		</div>
+		<button type="submit" class="small-8 small-centered medium-7 large-6 columns">
+			Update
+		</button>
+	</form>
+</div>
+{% endfor %}
+{% endblock %}

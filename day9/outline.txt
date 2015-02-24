@@ -1,0 +1,12 @@
+Cory Wilson
+Lab 9
+
+Python CRUD
+
+Screencast Url: http://youtu.be/TnSSYAY7sMo
+
+-Used python & flask to create a basic CRUD application
+-Display Users
+-Create User
+-Edit User
+-Delete User
