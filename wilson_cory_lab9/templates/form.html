@@ -2,23 +2,33 @@
 {% block body %}
 <div class="small-11 small-centered medium-10 medium-centered large-8 large-centered columns">
 
-	<form action="/login" enctype="multipart/form-data" method="POST">
+	<form action="/submit_info" enctype="multipart/form-data" method="POST">
 		<div class="row">
-			  <h1>SSL Lab 9 | Log In Form</h1>
+			  <h1>SSL Lab 10 | Travel Information</h1>
 		</div>
 		<div class="row">
 			<div class="small-11 small-centered columns">
-				<input type="text" name="name" placeholder="Name" value=""/>
+				<input type="text" name="start_city" placeholder="Starting City:" value=""/>
 			</div>
 		</div>
 		<div class="row">
 			<div class="small-11 small-centered columns">
-				<input type="password" name="password" placeholder="Password" value=""/>
+				<input type="text" name="start_state" placeholder="Starting State:" value=""/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="small-11 small-centered columns">
+				<input type="text" name="end_city" placeholder="Ending City:" value=""/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="small-11 small-centered columns">
+				<input type="text" name="end_state" placeholder="Ending State:" value=""/>
 			</div>
 		</div>
 		<div class="row">
 			<button type="submit" class="small-8 small-centered medium-7 large-6 columns">
-				Log In
+				Submit
 			</button>
 		</div>
 	</form>

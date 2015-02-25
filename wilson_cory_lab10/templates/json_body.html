@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="body small-11 small-centered medium-10 medium-centered large-8 large-centered columns">
+	<h1>SSL Lab 10 | Travel Information</h1>
+	<div class="row">
+		<p>From: {{start}}</p>
+	</div>
+	<div class="row">
+		<p>To: {{end}}</p>
+	</div>
+	<div class="row">
+		<p>Distance: {{distance}}</p>
+	</div>
+	<div class="row">
+		<p>Duration: {{duration}}</p>
+	</div>
+</div>
+{% endblock %}

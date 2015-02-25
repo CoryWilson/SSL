@@ -1,12 +1,8 @@
 Cory Wilson
-Lab 9
+Lab 10
 
-Python CRUD
+Python API
 
-Screencast Url: http://youtu.be/TnSSYAY7sMo
+Screencast Url: 
 
--Used python & flask to create a basic CRUD application
--Display Users
--Create User
--Edit User
--Delete User
+-Used python & flask to read and parse JSON data from the Google Maps API
