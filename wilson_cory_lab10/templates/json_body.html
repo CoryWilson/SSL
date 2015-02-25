@@ -1,8 +1,38 @@
 {% extends "layout.html" %}
 {% block body %}
+<script>
+
+function initialize() {
+  var mapOptions = {
+    zoom: 4,
+    center: new google.maps.LatLng(39, -98),
+    mapTypeId: google.maps.MapTypeId.TERRAIN
+  };
+
+  var map = new google.maps.Map(document.getElementById('map-canvas'),
+      mapOptions);
+
+  var drivePlanCoordinates = [
+    new google.maps.LatLng({{start_lat}},{{start_lng}}),
+    new google.maps.LatLng({{end_lat}},{{end_lng}})
+  ];
+  var drivePath = new google.maps.Polyline({
+    path: drivePlanCoordinates,
+    geodesic: true,
+    strokeColor: '#FF0000',
+    strokeOpacity: 1.0,
+    strokeWeight: 2
+  });
+
+  drivePath.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+</script>
 <div class="body small-11 small-centered medium-10 medium-centered large-8 large-centered columns">
 	<h1>SSL Lab 10 | Travel Information</h1>
-	<div class="row">
+	<div class="row ">
 		<p>From: {{start}}</p>
 	</div>
 	<div class="row">
@@ -13,6 +43,9 @@
 	</div>
 	<div class="row">
 		<p>Duration: {{duration}}</p>
+	</div>
+	<div class="row">
+		<div class="small-centered columns" id="map-canvas" style="width: 500px; height: 400px;"></div>
 	</div>
 </div>
 {% endblock %}

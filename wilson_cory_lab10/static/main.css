@@ -29,4 +29,11 @@ form .row {
 .profile, .home {
 	padding: 30px;
 }
+.body, .body .row {
+	height: 100%;
+}
+#map-canvas {
+	height: 100%;
+	border: 1px solid black;
+}
 

@@ -47,10 +47,14 @@ def submit_info():
      
      start = data['routes'][0]['legs'][0]['start_address']
      end = data['routes'][0]['legs'][0]['end_address']
+     start_lat = data['routes'][0]['legs'][0]['start_location']['lat']
+     start_lng = data['routes'][0]['legs'][0]['start_location']['lng']
+     end_lat = data['routes'][0]['legs'][0]['end_location']['lat']
+     end_lng = data['routes'][0]['legs'][0]['end_location']['lng']
      distance = data['routes'][0]['legs'][0]['distance']['text']
      duration = data['routes'][0]['legs'][0]['duration']['text']
      polyline = data['routes'][0]['overview_polyline']['points']
-     return render_template('json_body.html',start=start,end=end,distance=distance,duration=duration)
+     return render_template('json_body.html',start=start,end=end,distance=distance,duration=duration, start_lat=start_lat,start_lng=start_lng,end_lat=end_lat,end_lng=end_lng)
 
 #serves up the images from the uploads folder
 @app.route('/uploads/<filename>')
