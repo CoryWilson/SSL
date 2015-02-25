@@ -3,6 +3,7 @@ Lab 10
 
 Python API
 
-Screencast Url: 
+Screencast Url: http://youtu.be/ZyEKFVzVsig
 
 -Used python & flask to read and parse JSON data from the Google Maps API
+-Used the api to display search results as well as a basic point a to point b map with JS

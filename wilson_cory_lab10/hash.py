@@ -10,19 +10,6 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.debug = True
 sha1 = hashlib.sha1()
 
-# @app.route('/')
-# def get_json():
-#      api_key_b = "AIzaSyCy3kAz1R6WFKNrSL0wqE0qVcJwd9HSzJ4"
-#      api_key_s = "AIzaSyCiXjaUwDAUVQpMtsKYFahB2q7dzNolXYY"
-#      url = "https://maps.googleapis.com/maps/api/directions/json?origin=Orlando,FL&destination=Los+Angeles,CA&key="+api_key_b
-#      loadurl = urllib.urlopen(url)
-#      data = json.loads(loadurl.read().decode(loadurl.info().getparam('charset') or 'utf-8'))
-#      start = data['routes'][0]['legs'][0]['start_address']
-#      end = data['routes'][0]['legs'][0]['end_address']
-#      distance = data['routes'][0]['legs'][0]['distance']['text']
-#      duration = data['routes'][0]['legs'][0]['duration']['text']
-#      return render_template('json_body.html',start=start,end=end,distance=distance,duration=duration)
-
 @app.route('/')
 def form():
      return render_template('/form.html')
@@ -40,7 +27,6 @@ def submit_info():
      end_input = end_city_input+','+end_state_input
 
      url = "https://maps.googleapis.com/maps/api/directions/json?origin="+start_input+"&destination="+end_input+"&key="+api_key_b
-     #url = "https://maps.googleapis.com/maps/api/directions/json?origin=Orlando,FL&destination=Los+Angeles,CA&key="+api_key_b
      
      loadurl = urllib.urlopen(url)
      data = json.loads(loadurl.read().decode(loadurl.info().getparam('charset') or 'utf-8'))
@@ -54,6 +40,7 @@ def submit_info():
      distance = data['routes'][0]['legs'][0]['distance']['text']
      duration = data['routes'][0]['legs'][0]['duration']['text']
      polyline = data['routes'][0]['overview_polyline']['points']
+     
      return render_template('json_body.html',start=start,end=end,distance=distance,duration=duration, start_lat=start_lat,start_lng=start_lng,end_lat=end_lat,end_lng=end_lng)
 
 #serves up the images from the uploads folder
